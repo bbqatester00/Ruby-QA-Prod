@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @page_title %></title>
+  <meta name="author" content="Greg Sypolt">
+  <%= stylesheet_link_tag "/stylesheets/public.css", :media => "all" %>
+</head>
+<body>
+	<div class="banner" id="banner">
+		<header>
+			<h1><%= @page_title%></h1>
+			<!-- ><p><%= @description%></p> -->
+		</header>
+	</div>
+	
+	<div class="menu" id="menu">
+		<ul class="buttons" idid="buttons" align="right">
+			<li><a href="/">Home</a></li>
+			<li><a href="/axman/axman_reports">AxMan Reports</a></li>
+			<li><a href="/fit_analyzer/analyzer">FIT Analyzer</a></li>
+			<!-- ><li><a href="environment">Environment</a></li> -->
+		</ul>
+	</div>
+
+	<div class="content_wrapper" id="content_wrapper">
+		<%= yield %>		
+	</div>
+
+	<div class="footer" id="footer">
+		<p>Blackboard QA 2012</p>
+	</div>
+</body>
+</html>

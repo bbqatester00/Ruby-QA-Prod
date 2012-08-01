@@ -1,0 +1,12 @@
+<% @page_title = "Adhoc Reports"%>
+
+<p>The Adhoc Reports is coming soon...</p>
+
+<%= link_to "link to test.csv file", "/test.csv" -%>
+
+<p></p>
+
+<%= link_to('Run', {:controller=>'download', :action=>'runmyscript'})%>
+
+ 
+<h5><i><font color="red"><%= flash[:notice] %></font></i></h5>

@@ -1,0 +1,2 @@
+module FitAnalyzerHelper
+end
