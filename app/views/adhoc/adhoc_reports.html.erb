@@ -1,12 +1,16 @@
 <% @page_title = "Adhoc Reports"%>
+<%= stylesheet_link_tag "/stylesheets/adhoc.css", :media => "all" %>
 
-<p>The Adhoc Reports is coming soon...</p>
-
-<%= link_to "link to test.csv file", "/test.csv" -%>
-
-<p></p>
-
-<%= link_to('Run', {:controller=>'download', :action=>'runmyscript'})%>
-
- 
-<h5><i><font color="red"><%= flash[:notice] %></font></i></h5>
+<div class="adhoc_content" id="adhoc_content">
+	<p id="header">Axman Failed Tests For The Last 30 Days</p>
+	<div id="last30days">
+		<%= button_to('Click To Download Report', {:controller=>'download', :action=>'runmyscript'}, :method => :get)%>
+		<h5><i><font color="red"><%= flash[:notice] %></font></i></h5>
+	</div>
+	
+	<p id="header">Unassigned Tests On Axman</p>
+	<div id="unassigned_tests">
+		<%= button_to('Click To Download Report', {:controller=>'download2', :action=>'runmyscript2'}, :method => :get)%>
+		<h5><i><font color="red"><%= flash[:notice] %></font></i></h5>
+	</div>
+</div>

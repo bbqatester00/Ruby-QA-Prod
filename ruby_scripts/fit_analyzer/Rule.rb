@@ -1,5 +1,5 @@
 class Rule
-  require 'Violation.rb'
+  load '/Users/kwaun-jonglin/Desktop/Ruby-QA-Prod/ruby_scripts/fit_analyzer/Violation.rb'
   def initialize table
     @table = table
   end

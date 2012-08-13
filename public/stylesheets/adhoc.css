@@ -1,0 +1,7 @@
+.adhoc_content { background-color: transparent; }
+
+.adhoc_content #header { 
+	font-size: 14px; 
+	font-style: bold; }
+
+#last30days div, #unassigned_tests div { background-color: #efeaef; }

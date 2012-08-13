@@ -1,6 +1,6 @@
 class Strategy
-  require 'Rule.rb'
-  require 'Violation.rb'
+  load '/Users/kwaun-jonglin/Desktop/Ruby-QA-Prod/ruby_scripts/fit_analyzer/Rule.rb'
+  load '/Users/kwaun-jonglin/Desktop/Ruby-QA-Prod/ruby_scripts/fit_analyzer/Violation.rb'
   def initialize 
 
     # do something

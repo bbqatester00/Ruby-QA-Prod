@@ -4,7 +4,8 @@
 
 <div class="analyzer_content" id="analyzer_content">
 	<p id="header">Run FitNesse Analyzer</p>
-	<form id="exe_analyzer_form">
-		<ul><%= link_to 'Execute Analyzer', :controller => 'fit_analyzer', :action => 'execute_analyzer', :confirm => 'Are you sure?', :remote => true %></ul>
-	</form>
+	<div id="exe_analyzer_form">
+	<%= button_to('Click To Execute Analyzer', {:controller => 'fit_analyzer', :action => 'execute_analyzer'}, :method => :get)%>
+	<h5><i><font color="red"><%= flash[:notice] %></font></i></h5>
+</div>
 </div>

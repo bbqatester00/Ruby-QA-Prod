@@ -1,12 +1,12 @@
 module FitAnalyzer
   $LOAD_PATH.unshift File.dirname($PROGRAM_NAME)
-  require 'Parser.rb'
+  load '/Users/kwaun-jonglin/Desktop/Ruby-QA-Prod/ruby_scripts/fit_analyzer/Parser.rb'
   
   def command_line_interface
     # TODO: Read ARGV for options
-    default_root="/Users/gsypolt/BbAssist/FitNesseRoot"
+    default_root="/Users/kwaun-jonglin/kwaun.lin_macpro13/kwaun.lin_macpro13/FITNESSE"
     search_type = "all"
-    log_file = "/Users/gsypolt/rubyqa_project/ruby_scripts/fit_analyzer/logs/fitanalyser.log"
+    log_file = "/Users/kwaun-jonglin/Desktop/Ruby-QA-Prod/ruby_scripts/fit_analyzer/logs/fitanalyser.log"
     fit_analyzer default_root, search_type, log_file
   end
   
@@ -29,7 +29,7 @@ module FitAnalyzer
     }
   end
   
-  def file_search fitNesseRoot, type
+  def file_search fitnesse, type
     folder = case type
       when "regression"
         "RegressionSuite"
@@ -42,7 +42,7 @@ module FitAnalyzer
       else
         raise Exception, "Need regression, component, scenario, all, or none as second argument."
       end
-    Dir.chdir(fitNesseRoot + "/LearnMainline/BbLearnTests/") {
+    Dir.chdir(fitnesse + "/LearnMainline/BbLearnTests/") {
       Dir.glob("./**/" + folder + "/**/content.txt") { |f| 
         # puts File.expand_path(f)
         yield f

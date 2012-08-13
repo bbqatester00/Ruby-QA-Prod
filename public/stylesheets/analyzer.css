@@ -1,6 +1,7 @@
 .analyzer_content { background-color: transparent; }
 
 .analyzer_content #header { 
-	font-size: 14px; }
+	font-size: 14px; 
+	font-style: bold; }
 
-.analyzer_content ul { background-color: transparent;}
+#exe_analyzer_form div { background-color: #efeaef; }

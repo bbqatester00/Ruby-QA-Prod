@@ -1,5 +1,5 @@
 require 'rubygems'
-require '/usr/local/rvm/gems/ruby-1.9.3-p194@railsTest/gems/pg-0.14.0/lib/pg'
+require 'pg'
 
 #connects to axman2_prod (production) database
 @conn = PGconn.connect("addict.pd.local", 5432,"","","axman2_prod" ,"postgres", "bl@ckb0ard")

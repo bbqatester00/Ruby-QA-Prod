@@ -3,8 +3,8 @@ class Parser
   # At this time it will create tables from the files.
   # Once a table is complete, parse will create a Table Context object
   # and send that to the Table Strategy object. 
-  require 'Strategy.rb'
-  require 'Context.rb'
+  load '/Users/kwaun-jonglin/Desktop/Ruby-QA-Prod/ruby_scripts/fit_analyzer/Strategy.rb'
+  load '/Users/kwaun-jonglin/Desktop/Ruby-QA-Prod/ruby_scripts/fit_analyzer/Context.rb'
   def initialize
     # Initializing the parser object
   end

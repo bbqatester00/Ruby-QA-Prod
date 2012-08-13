@@ -1,0 +1,12 @@
+<% @page_title = "Adhoc Reports"%>
+
+<STRONG><p>Axman Failed Tests For The Last 30 Days</p></STRONG>
+
+<%= button_to('Click To Download Report', {:controller=>'download', :action=>'runmyscript'}, :method => :get)%>
+<h5><i><font color="red"><%= flash[:notice] %></font></i></h5>
+<p></p>
+
+<STRONG><p>Unassigned Tests On Axman</p></STRONG>
+
+<%= button_to('Click To Download Report', {:controller=>'download2', :action=>'runmyscript2'}, :method => :get)%>
+<h5><i><font color="red"><%= flash[:notice] %></font></i></h5>

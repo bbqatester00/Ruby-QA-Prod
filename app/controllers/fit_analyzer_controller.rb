@@ -1,11 +1,8 @@
 class FitAnalyzerController < ApplicationController
-  def analyzer
-  end
-
   def execute_analyzer
-    @execute_command = system('ruby /Users/gsypolt/rubyqa_project/ruby_scripts/fit_analyzer/FitAnalyzer.rb')
-    flash[:notice] = "Executing FitNesse Analyzer"
-    send_file '/usr/local/rvm/my_app/ruby_scripts/fit_analyzer/logs/fitanalyser.log', :type => 'text/csv', :disposition => 'inline'
+    load '/Users/kwaun-jonglin/Desktop/Ruby-QA-Prod/ruby_scripts/fit_analyzer/FitAnalyzer.rb'
+    send_file '/Users/kwaun-jonglin/Desktop/Ruby-QA-Prod/ruby_scripts/fit_analyzer/logs/fitanalyser.log', :type => 'text/csv', :disposition => 'inline'
+    flash[:notice] = "Executing FitNesse analyzer..."
   end
 end
 
